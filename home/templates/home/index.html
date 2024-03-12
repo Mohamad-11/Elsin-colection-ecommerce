@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+        <!DOCTYPE html>
+        <html lang="fa">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>فروشگاه آنلاین</title>
+            {% block header %}
+        <link rel="stylesheet" href="{% static 'css/home-detail.css' %}">
+
+            {% endblock %}
+        </head>
+        <body>
+
+        <div class="product-box">
+            <img src="{% static 'images/logo-elsin.jpg' %}" alt="محصول شماره ۱">
+            <h2>محصول شماره ۱</h2>
+            <p>توضیحات کوتاه محصول شماره ۱</p>
+            <span class="price">۱۰۰,۰۰۰ تومان</span>
+            <button class="btn">افزودن به سبد خرید</button>
+            <button class="btn-desk">مشاهده جزئیات محصول</button>
+        </div>
+        
+        {% block footer %}
+            <script src="{% static 'js/home-detail.js' %}"></script>
+
+        {% endblock %}
+        </body>
+        </html>
+
+{% endblock %}
+
+
+
+
+
