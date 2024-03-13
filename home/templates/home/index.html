@@ -15,14 +15,22 @@
         </head>
         <body>
 
-        <div class="product-box">
-            <img src="{% static 'images/logo-elsin.jpg' %}" alt="محصول شماره ۱">
-            <h2>محصول شماره ۱</h2>
-            <p>توضیحات کوتاه محصول شماره ۱</p>
-            <span class="price">۱۰۰,۰۰۰ تومان</span>
-            <button class="btn">افزودن به سبد خرید</button>
-            <button class="btn-desk">مشاهده جزئیات محصول</button>
-        </div>
+        {% for product in products %}
+            <div class="product-box">
+
+
+                <img src="{{ image.image.url }}" alt="عکس محصول ">
+
+
+
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <span class="price">{{ formatted_price }} تومان   </span>
+                <button class="btn-desk">افزودن به سبد خرید</button>
+                <button class="btn-desk">مشاهده جزئیات محصول</button>
+            </div>
+        {% endfor %}
+
         
         {% block footer %}
             <script src="{% static 'js/home-detail.js' %}"></script>

@@ -18,3 +18,4 @@ class ProductAdmin(admin.ModelAdmin):
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('image', 'product')
+
