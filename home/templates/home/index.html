@@ -16,22 +16,18 @@
         <body>
 
         {% for product in products %}
+
             <div class="product-box">
-
-
-                <img src="{{ image.image.url }}" alt="عکس محصول ">
-
-
-
+                <img src="{{ product.image.url }}" alt="عکس محصول ">
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description }}</p>
-                <span class="price">{{ formatted_price }} تومان   </span>
-                <button class="btn-desk">افزودن به سبد خرید</button>
+                <span class="price">{{ product.price }} تومان   </span>
+                <button class="btn-out">افزودن به سبد خرید</button>
                 <button class="btn-desk">مشاهده جزئیات محصول</button>
             </div>
         {% endfor %}
 
-        
+
         {% block footer %}
             <script src="{% static 'js/home-detail.js' %}"></script>
 
@@ -40,8 +36,3 @@
         </html>
 
 {% endblock %}
-
-
-
-
-
