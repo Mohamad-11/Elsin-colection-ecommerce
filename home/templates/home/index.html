@@ -18,12 +18,14 @@
         {% for product in products %}
 
             <div class="product-box">
-                <img src="{{ product.image.url }}" alt="عکس محصول ">
+                <img src="{{ product.image.url }}" alt="عکس محصول " style="width: 125px; height: 130px">
                 <h2>{{ product.name }}</h2>
-                <p>{{ product.description }}</p>
+                <p>{{ product.description|truncatechars:12 }}</p>
                 <span class="price">{{ product.price }} تومان   </span>
-                <button class="btn-out">افزودن به سبد خرید</button>
-                <button class="btn-desk">مشاهده جزئیات محصول</button>
+                <button class="btn-desk">افزودن به سبد خرید</button>
+                <a href="{% url 'home:detail_product' product.slug %}" style="display: inline-block; padding: 10px 20px;
+                background-color: purple; color: white;  border-radius: 5px; text-decoration: none; transition: background-color 0.3s;"
+                >مشاهده جزئیات محصول</a>
             </div>
         {% endfor %}
 

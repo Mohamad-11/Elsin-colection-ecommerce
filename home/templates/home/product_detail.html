@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشخصات محصول</title>
+    {% block header %}
+        <link rel="stylesheet" href="{% static 'css/detail_product_view.css' %}">
+    {% endblock %}
+
+</head>
+<body>
+
+
+            <div class="wrapper" style="margin-top: 10px">
+                    <div id="image-slider">
+                        {% for image in images %}
+                            <img src="{{ product.image.url }}" alt="Product Image 1" style="height: 400px; width: 300px">
+                        {% endfor %}
+                    </div>
+
+                <h1>{{ product.name }}</h1>
+                <p>{{ product.description }}</p>
+                <h2>{{ product.price }} تومان   </h2>
+                <button id="add-to-cart">افزودن به سبد خرید</button>
+            </div>
+
+
+     {% block footer %}
+         <script src="{% static 'js/detail_product_view.js' %}"></script>
+     {% endblock %}
+
+</body>
+</html>
+
+{% endblock %}
+
+
+
+
+
+
