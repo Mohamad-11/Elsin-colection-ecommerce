@@ -24,7 +24,7 @@ class Product(models.Model):
     slug = models.SlugField(max_length=25, verbose_name='اسلاگ ', unique=True)
     description = models.TextField(verbose_name='توضیحات ')
     price = models.IntegerField(verbose_name='قیمت محصول ')
-    image = models.ImageField(upload_to='product/%Y/%M/%D',null=True, blank=True, verbose_name='عکس محصول ')
+    image = models.ImageField(upload_to='product/%Y/%m', null=True, blank=True, verbose_name='عکس محصول ')
     available = models.BooleanField(default=True, verbose_name='موجودی محصول ')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

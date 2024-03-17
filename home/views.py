@@ -7,8 +7,8 @@ from django.contrib import messages
 
 # Create your views here.
 
-class HomeView(View):
 
+class HomeView(View):
     def get(self, request, *args, **kwargs):
         products = Product.objects.all()
         for product in products:

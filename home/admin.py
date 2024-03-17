@@ -20,7 +20,6 @@ class ProductAdmin(admin.ModelAdmin):
     raw_id_fields = ('category',)
 
 
-
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('image', 'product')

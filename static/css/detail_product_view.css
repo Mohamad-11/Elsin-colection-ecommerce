@@ -19,7 +19,7 @@ body {
 }
 
 #image-slider img {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     animation: slide 5s infinite;
 }
