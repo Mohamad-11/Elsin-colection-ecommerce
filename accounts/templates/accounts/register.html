@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحه ثبت‌نام</title>
+    {% block header %}
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+    {% endblock %}
+</head>
+<body>
+    <div class="container">
+        <h2>ثبت ‌نام</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label>نام کاربری:</label>
+            <form>{{ form.phone_number }}</form>
+
+            <label>ایمیل:</label>
+            <form>{{ form.email }}</form>
+
+            <label>رمز عبور:</label>
+            <form>{{ form.password1 }}</form>
+
+            <label>تکرار رمز عبور:</label>
+            <form>{{ form.password2 }}</form>
+            <button type="submit" class="btn btn-success">Login</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+{% endblock %}

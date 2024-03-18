@@ -9,18 +9,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>فروشگاه آنلاین</title>
             {% block header %}
-        <link rel="stylesheet" href="{% static 'css/home-detail.css' %}">
+                <link rel="stylesheet" href="{% static 'css/home-detail.css' %}">
 
             {% endblock %}
         </head>
         <body>
-
         {% for product in products %}
 
-            <div class="product-box">
-                <img src="{{ product.image.url }}" alt="عکس محصول " style="width: 125px; height: 130px">
+            <div class="product-box" style="border: 1.5px solid #535353">
+                <img src="{{ product.image.url }}" alt="عکس محصول " style="width: 125px; height: 125px">
                 <h2>{{ product.name }}</h2>
-                <p>{{ product.description|truncatechars:12 }}</p>
+                <p>{{ product.description|truncatechars:10 }}</p>
                 <span class="price">{{ product.price }} تومان   </span>
                 <button class="btn-desk">افزودن به سبد خرید</button>
                 <a href="{% url 'home:detail_product' product.slug %}" style="display: inline-block; padding: 10px 20px;

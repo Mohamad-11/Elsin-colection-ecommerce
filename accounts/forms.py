@@ -40,3 +40,4 @@ class UserChangeForm(forms.ModelForm):
         model = User
         fields = ('email', 'phone_number', 'full_name', 'avatar', 'password', 'last_login')
 
+

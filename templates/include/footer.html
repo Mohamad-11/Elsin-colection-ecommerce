@@ -1,20 +1,22 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Footer</title>
+    <title>Footer Animation</title>
         {% block header %}
-        	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
-        {% endblock %}
+            <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
+        {% endblock %}
     </head>
     <body>
-
     <footer>
-      <p>&copy; 2024 | ELSIN_COLLECTION </p>
+        <p>Copyright &copy; ELSIN-COLLECTION</p>
     </footer>
-    <script src="script.js"></script>
-</body>
+    {% block footer %}
+        <script src="{% static 'js/footer.js' %}"></script>
+
+    {% endblock %}
+    </body>
 </html>
