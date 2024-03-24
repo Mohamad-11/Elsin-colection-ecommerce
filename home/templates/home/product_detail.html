@@ -17,10 +17,10 @@
 <body>
 
 
-            <div class="wrapper">
+            <div class="wrapper" style="margin-top: 8px">
                     <div id="image-slider">
                         {% for image in product.images.all %}
-                            <img src="{{ image.image.url }}" alt="Product Image 1" style="height: 400px; width: 300px">
+                            <img src="{{ image.image.url }}" alt="Product Image 1" style="height: 300px; width: 250px">
                         {% endfor %}
                     </div>
 

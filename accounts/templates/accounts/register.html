@@ -19,7 +19,7 @@
         <h2>ثبت ‌نام</h2>
         <form method="post">
             {% csrf_token %}
-            <label>نام کاربری:</label>
+            <label>شماره تلفن :</label>
             <form>{{ form.phone_number }}</form>
 
             <label>ایمیل:</label>
@@ -30,7 +30,7 @@
 
             <label>تکرار رمز عبور:</label>
             <form>{{ form.password2 }}</form>
-            <button type="submit" class="btn btn-success">Login</button>
+            <button type="submit" class="btn btn-success">ثبت نام </button>
         </form>
     </div>
     <script src="script.js"></script>

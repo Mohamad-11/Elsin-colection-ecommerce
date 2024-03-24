@@ -17,7 +17,9 @@
         {% for product in products %}
 
             <div class="product-box" style="border: 1.5px solid #535353">
+                <a href="{% url 'home:detail_product' product.slug %}">
                 <img src="{{ product.image.url }}" alt="عکس محصول " style="width: 125px; height: 125px">
+                </a>
                 <h2>{{ product.name }}</h2>
                 <p>{{ product.description|truncatechars:10 }}</p>
                 <span class="price">{{ product.price }} تومان   </span>

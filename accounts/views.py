@@ -14,7 +14,6 @@ class UserRegisterView(LoginRequiredMixin, View):
 
     def get(self, request):
         form = UserCreationForm()
-        messages.success(request, 'you are registered')
         return render(request, 'accounts/register.html', {'form': form})
 
     def post(self, request):
